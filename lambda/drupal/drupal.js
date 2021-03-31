@@ -77,7 +77,23 @@ app.post(`/api/drupal`,
       return;
     }
 
-    res.json({ text: 'Your report has been generated at a temporary url: <bit.ly/IqT6zt>'});
+    let defInfo = `
+    Drupal version   : 9.1.5
+    Site URI         : https://${site}
+    DB driver        : mysql
+    Database         : Connected
+    Drupal bootstrap : Successful
+    Default theme    : stanford_basic
+    Admin theme      : seven
+    Drush version    : 10.4.0
+    Install profile  : stanford_profile
+`;
+
+    res.json({ 
+      text: defInfo + '<bit.ly/IqT6zt|expand more...>',
+      unfurl_links: true,
+      unfurl_media: true
+    });
   } 
 )
 
