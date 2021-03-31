@@ -42,6 +42,7 @@ const getJSAContentResponse = () => {
   Administration theme :  stanford_seven
   Drush version        :  8.4.2
   Install profile      :  stanford
+  <https://bit.ly/IqT6zt|expand more...>
 `;
   return ret;
 }
@@ -57,6 +58,7 @@ const getUserGuideStanfordEdu = () => {
   Admin theme      : seven
   Drush version    : 10.4.0
   Install profile  : stanford_profile
+  <https://bit.ly/IqT6zt|expand more...>
 `;
   return ret;
 }
