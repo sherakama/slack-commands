@@ -33,15 +33,15 @@ app.use(cookieParser());
 
 const getJSAContentResponse = () => {
   let ret = `
-  Drupal version                  :  7.78
-  Site URI                        :  jsa-content.stanford.edu
-  Database driver                 :  mysql
-  Database                        :  Connected
-  Drupal bootstrap                :  Successful
-  Default theme                   :  stanford_wilbur
-  Administration theme            :  stanford_seven
-  Drush version                   :  8.4.2
-  Install profile                 :  stanford
+  Drupal version       :  7.78
+  Site URI             :  https://jsa-content.stanford.edu
+  Database driver      :  mysql
+  Database             :  Connected
+  Drupal bootstrap     :  Successful
+  Default theme        :  stanford_wilbur
+  Administration theme :  stanford_seven
+  Drush version        :  8.4.2
+  Install profile      :  stanford
 `;
   return ret;
 }
@@ -49,7 +49,7 @@ const getJSAContentResponse = () => {
 const getUserGuideStanfordEdu = () => {
   let ret = `
   Drupal version   : 9.1.5
-  Site URI         : http://userguide.sites.stanford.edu
+  Site URI         : https://userguide.sites.stanford.edu
   DB driver        : mysql
   Database         : Connected
   Drupal bootstrap : Successful
@@ -77,7 +77,7 @@ app.post(`/api/drupal`,
       return;
     }
 
-    res.send('https://youtu.be/ub82Xb1C8os');
+    res.send('<<https://youtu.be/ub82Xb1C8os>');
   } 
 )
 
