@@ -77,7 +77,7 @@ app.post(`/api/drupal`,
       return;
     }
 
-    res.json({ text: '<<https://youtu.be/ub82Xb1C8os>'});
+    res.json({ text: 'Your report has been generated at a temporary url: <bit.ly/IqT6zt>'});
   } 
 )
 
