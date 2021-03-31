@@ -15,21 +15,22 @@
   for = "/*"
   [headers.values]
     Access-Control-Allow-Origin = "*"
-    Content-Security-Policy = "form-action https:; frame-src *.stanford.edu *.storyblok.com"
+    Access-Control-Allow-Credentials = "true"
+    Content-Security-Policy = "form-action https:; frame-src *.stanford.edu *.netlify.app"
     X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "origin-when-cross-origin"
+    Referrer-Policy = "strict-origin-when-cross-origin"
     Strict-Transport-Security = "max-age=2592000"
-    Permissions-Policy = "vibrate=(), geolocation=(), midi=(), notifications=(), push=(), microphone=(), camera=(), magnetometer=(), gyroscope=(), speaker=(), vibrate=(), fullscreen=()"
+    Permissions-Policy = "vibrate=(), geolocation=(), midi=(), notifications=(), push=(), microphone=(), camera=(), magnetometer=(), gyroscope=(), speaker=()"
 
 # REDIRECTS
 # ##############################################################################
 
 [[redirects]]
-  from = "/a/*"
-  to = "https://a.storyblok.com/:splat"
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
   status = 200
-
-[[redirects]]
-  from = "/i/*"
-  to = "https://img2.storyblok.com/:splat"
-  status = 200
+  [redirects.headers]
+    Cache-Control = 'no-store, no-cache, must-revalidate, proxy-revalidate'
+    Pragma = 'no-cache'
+    Expires = '0'
+    Surrogate-Control = 'no-store'
