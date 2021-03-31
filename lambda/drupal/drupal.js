@@ -65,8 +65,8 @@ const getUserGuideStanfordEdu = () => {
 // -----------------------------------------------------------------------------
 app.post(`/api/drupal`,
   (req, res) => {
-    const site = req.body.site;
-    console.log(req.body);
+    const site = req.body.text;
+    // console.log(req.body);
     
     if (site == "jsa-content.stanford.edu") {
       res.json({text: getJSAContentResponse(),
