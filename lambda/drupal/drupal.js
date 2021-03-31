@@ -34,7 +34,7 @@ app.use(cookieParser());
 const getJSAContentResponse = () => {
   let ret = `
   Drupal version       :  7.78
-  Site URI             :  <<https://bit.ly/IqT6zt|https://jsa-content.stanford.edu>
+  Site URI             :  <https://bit.ly/IqT6zt|https://jsa-content.stanford.edu>
   Database driver      :  mysql
   Database             :  Connected
   Drupal bootstrap     :  Successful
@@ -49,7 +49,7 @@ const getJSAContentResponse = () => {
 const getUserGuideStanfordEdu = () => {
   let ret = `
   Drupal version   : 9.1.5
-  Site URI         : <<https://bit.ly/IqT6zt|https://userguide.sites.stanford.edu>
+  Site URI         : <https://bit.ly/IqT6zt|https://userguide.sites.stanford.edu>
   DB driver        : mysql
   Database         : Connected
   Drupal bootstrap : Successful
