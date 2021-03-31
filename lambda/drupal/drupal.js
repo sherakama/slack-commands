@@ -77,7 +77,7 @@ app.post(`/api/drupal`,
       return;
     }
 
-    res.json({ text: '<<https://youtu.be/ub82Xb1C8os>');
+    res.json({ text: '<<https://youtu.be/ub82Xb1C8os>'});
   } 
 )
 
