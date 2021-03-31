@@ -47,7 +47,7 @@ const getJSAContentResponse = () => {
 }
 
 const getUserGuideStanfordEdu = () => {
-  let ret `
+  let ret = `
   Drupal version   : 9.1.5
   Site URI         : http://userguide.sites.stanford.edu
   DB driver        : mysql
@@ -57,7 +57,7 @@ const getUserGuideStanfordEdu = () => {
   Admin theme      : seven
   Drush version    : 10.4.0
   Install profile  : stanford_profile
-  `;
+`;
   return ret;
 }
 
@@ -73,7 +73,7 @@ app.post(`/api/drupal`,
     }
 
     if (site == "userguide.sites.stanford.edu") {
-      res.send(getJSAContentResponse())
+      res.send(getUserGuideStanfordEdu())
       return;
     }
 
