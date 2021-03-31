@@ -68,16 +68,16 @@ app.post(`/api/drupal`,
     const site = req.body.site;
     
     if (site == "jsa-content.stanford.edu") {
-      res.send(getJSAContentResponse())
+      res.json({text: getJSAContentResponse()})
       return;
     }
 
     if (site == "userguide.sites.stanford.edu") {
-      res.send(getUserGuideStanfordEdu())
+      res.json({text: getUserGuideStanfordEdu()})
       return;
     }
 
-    res.send('<<https://youtu.be/ub82Xb1C8os>');
+    res.json({ text: '<<https://youtu.be/ub82Xb1C8os>');
   } 
 )
 
