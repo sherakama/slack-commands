@@ -66,14 +66,22 @@ const getUserGuideStanfordEdu = () => {
 app.post(`/api/drupal`,
   (req, res) => {
     const site = req.body.site;
+    console.log(req.body);
     
     if (site == "jsa-content.stanford.edu") {
-      res.json({text: getJSAContentResponse()})
+      res.json({text: getJSAContentResponse(),
+        unfurl_links: true,
+        unfurl_media: true,
+      });
       return;
     }
 
     if (site == "userguide.sites.stanford.edu") {
-      res.json({text: getUserGuideStanfordEdu()})
+      res.json({
+        text: getUserGuideStanfordEdu(),
+        unfurl_links: true,
+        unfurl_media: true,
+      });
       return;
     }
 
@@ -90,7 +98,7 @@ app.post(`/api/drupal`,
 `;
 
     res.json({ 
-      text: defInfo + '<bit.ly/IqT6zt|expand more...>',
+      text: defInfo + '<https://bit.ly/IqT6zt|expand more...>',
       unfurl_links: true,
       unfurl_media: true
     });
